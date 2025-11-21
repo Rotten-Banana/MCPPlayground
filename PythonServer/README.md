@@ -23,7 +23,7 @@ This project contains a Python server. Follow the instructions below to set up a
 3. **Install dependencies:**
    Install the required packages individually. Common packages for Python servers include:
    ```bash
-   uv install
+   uv sync
    ```
 
 ## Running the Server
