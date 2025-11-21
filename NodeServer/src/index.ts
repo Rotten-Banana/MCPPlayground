@@ -78,7 +78,11 @@ app.post('/mcp', async (req, res) => {
   // Handle DELETE requests for session termination
   app.delete('/mcp', handleSessionRequest);
   
-  app.listen(3000, () => {
+  app.listen(3000, (error: Error | undefined) => {
+    if (error) {
+      console.error("Error starting MCP server:", error);
+      return;
+    }
     console.log("Store MCP Server running on http://localhost:3000/mcp");
   });
 
